@@ -1,0 +1,24 @@
+server:
+  port: 20000
+spring:
+  application:
+    name: snow-server-admin
+  # 微服务注册信息
+  cloud:
+    nacos:
+      server-addr: ${NACOS_HOST:192.168.0.125}:${NACOS_PORT:8848}
+      discovery:
+        namespace: ${NACOS_NAMESPACE}
+        service: ${spring.application.name}
+        metadata:
+          version: ${VERSION:0.0.1}
+  # Redis链接配置
+  redis:
+    host: 192.168.0.125
+    port: 6379
+    password: 3edc#EDC
+  # 数据库配置（mysql）
+  datasource:
+    url: jdbc:mysql://192.168.0.115:3306/archive
+    username: root
+    password: root

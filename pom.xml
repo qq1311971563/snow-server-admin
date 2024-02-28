@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>snow-server-admin</artifactId>
+    <version>0.0.1</version>
+    <parent>
+        <groupId>com.snow</groupId>
+        <artifactId>snow-dependencies</artifactId>
+        <version>1.0.65</version>
+    </parent>
+    <dependencies>
+        <!--sprint boot 启动组件-->
+        <dependency>
+            <groupId>com.snow</groupId>
+            <artifactId>snow-spring-boot-starter</artifactId>
+        </dependency>
+        <!--数据库链接驱动-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!--jpa扩展组件(core服务需要)-->
+        <dependency>
+            <groupId>com.snow</groupId>
+            <artifactId>snow-jpa-spring-boot-starter</artifactId>
+        </dependency>
+        <!--core核心服务starter-->
+        <dependency>
+            <groupId>com.snow</groupId>
+            <artifactId>snow-server-core-starter</artifactId>
+        </dependency>
+    </dependencies>
+</project>
