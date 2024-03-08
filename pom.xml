@@ -1,13 +1,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <groupId>com.snow</groupId>
     <artifactId>snow-server-admin</artifactId>
     <version>0.0.1</version>
-    <parent>
-        <groupId>com.snow</groupId>
-        <artifactId>snow-dependencies</artifactId>
-        <version>1.0.65</version>
-    </parent>
+    <!--maven仓库jar下载地址-->
+    <repositories>
+        <repository>
+            <id>maven-releases</id>
+            <url>https://zzjzkj.gjjsoft.com:30001/nexus/repository/maven-public/</url>
+        </repository>
+    </repositories>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.snow</groupId>
+                <artifactId>snow-dependencies</artifactId>
+                <version>1.0.66</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
         <!--sprint boot 启动组件-->
         <dependency>
